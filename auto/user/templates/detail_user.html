@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Detail user{% endblock %}
+
+{% block content %}
+    <h1>Detail user</h1>
+    <p>User: {{ user.username }}</p>
+    <p>Superuser: {{ user.is_superuser }}</p>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <!-- здесь может быть код для шапки сайта -->
+  </header>
+  <main>
+    {% if user.is_authenticated and user.is_superuser %}
+        <p>You are superuser.</p>
+        <a href="{% url 'user_list' %}">User List</a>
+        <a href="{% url 'register' %}">Register</a>
+    {% endif %}
+    {% if user.is_authenticated %}
+        <p>{{ user.username }} are already logged in.</p>
+        <a href="{% url 'orders_list' %}">List orders</a>
+        <a href="{% url 'order_add' %}">Add order</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer>
+    <!-- здесь может быть код для подвала сайта -->
+  </footer>
+</body>
+</html>
