@@ -1,0 +1,3 @@
+2023-05-27 08:12:38,897 INFO Watching for file changes with StatReloader
+2023-05-27 08:14:30,175 INFO /usr/src/app/auto/auto/settings.py changed, reloading.
+2023-05-27 08:14:30,184 DEBUG Using selector: EpollSelector

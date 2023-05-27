@@ -1,16 +1,19 @@
 from django import forms
-from .models import Order
+from .models import Order, Image
+from django.forms import ClearableFileInput
+
+
+class ImageInlineForm(forms.ModelForm):
+    class Meta:
+        model = Image
+        fields = ['image']
+        widgets = {
+            'DELETE': forms.HiddenInput(),
+        }
 
 
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('description', 'product', 'quantity')
+        fields = ['product', 'description', 'quantity']
 
-    def save(self, commit=True, user=None):
-        order = super(OrderForm, self).save(commit=False)
-        if user:
-            order.user = user
-        if commit:
-            order.save()
-        return order

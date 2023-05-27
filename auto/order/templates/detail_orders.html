@@ -9,4 +9,10 @@
     <p>Quantity: {{ order.quantity }}</p>
     <p>Added: {{ order.user }}</p>
     <p>Date_created: {{ order.date_created }}</p>
+    {% if order.image_set.all %}
+      <h3>Images:</h3>
+      {% for image in order.image_set.all %}
+        <img class="image__orders" src="{{ image.image.url }}" alt="Order image">
+      {% endfor %}
+    {% endif %}
 {% endblock %}

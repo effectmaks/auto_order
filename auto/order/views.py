@@ -4,6 +4,16 @@ from .models import Order
 from .forms import OrderForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .models import Image
+from django.conf import settings
+import os
+import logging
+import uuid
+from django.core.files.uploadedfile import InMemoryUploadedFile
+import io
+import imghdr
+import time
+logger = logging.getLogger('django')
 
 
 @login_required
@@ -28,7 +38,7 @@ def order_detail(request, pk):
 
 
 @login_required
-def add_order(request):
+def add_order1(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
@@ -37,6 +47,40 @@ def add_order(request):
     else:
         form = OrderForm()
     return render(request, 'add_order.html', {'form': form})
+
+
+from .forms import OrderForm, ImageInlineForm
+from django.forms import inlineformset_factory
+
+@login_required
+def add_order(request):
+    ImageFormSet = inlineformset_factory(Order, Image, form=ImageInlineForm, extra=3, can_delete=False)
+
+    if request.method == 'POST':
+        order_form = OrderForm(request.POST)
+        formset = ImageFormSet(request.POST, request.FILES)
+
+        if order_form.is_valid() and formset.is_valid():
+            order = order_form.save(commit=False)
+            order.user = request.user
+            order.save()
+
+            for form in formset:
+                if form.cleaned_data.get('image'):
+                    image = form.save(commit=False)
+                    image.order = order
+                    image.save()
+            return redirect('orders_list')
+    else:
+        order_form = OrderForm()
+        formset = ImageFormSet()
+
+    context = {
+        'order_form': order_form,
+        'formset': formset,
+    }
+
+    return render(request, 'add_order.html', context)
 
 
 @login_required

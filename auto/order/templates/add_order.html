@@ -3,10 +3,15 @@
 {% block title %}Add{% endblock %}
 
 {% block content %}
-  <h1>Add Order</h1>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <h1>Add Order</h1>
+  <form action="{% url 'order_add' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ order_form.as_p }}
+      {{ formset.management_form }}
+      {% for form in formset.forms %}
+          {{ form.as_p }}
+      {% endfor %}
+      <input type="submit" value="Submit">
   </form>
 {% endblock %}
+

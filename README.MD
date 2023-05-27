@@ -1,0 +1,1 @@
+#docker-compose run django python auto/manage.py migrate

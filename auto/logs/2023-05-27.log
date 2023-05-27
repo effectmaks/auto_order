@@ -1,0 +1,10 @@
+2023-05-27 08:15:22,549 INFO Watching for file changes with StatReloader
+2023-05-27 08:17:05,605 INFO /usr/src/app/auto/order/forms.py changed, reloading.
+2023-05-27 08:17:06,601 INFO Watching for file changes with StatReloader
+2023-05-27 08:20:29,046 INFO /usr/src/app/auto/order/views.py changed, reloading.
+2023-05-27 08:20:30,120 INFO Watching for file changes with StatReloader
+2023-05-27 08:22:11,569 INFO Watching for file changes with StatReloader
+2023-05-27 11:23:03,218 INFO Watching for file changes with StatReloader
+2023-05-27 11:24:56,701 INFO C:\Users\Maks\PycharmProjects\orders-auto\auto\auto\settings.py changed, reloading.
+2023-05-27 11:26:37,176 INFO Watching for file changes with StatReloader
+2023-05-27 11:28:22,707 INFO C:\Users\Maks\PycharmProjects\orders-auto\auto\auto\settings.py changed, reloading.
