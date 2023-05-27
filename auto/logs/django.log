@@ -1649,3 +1649,22 @@ ValueError: save() prohibited to prevent data loss due to unsaved related object
 2023-05-27 13:53:40,873 INFO basehttp 13668 16164 "GET /static/css/style.css HTTP/1.1" 200 86
 2023-05-27 13:53:56,595 INFO basehttp 13668 16164 "GET /order/62/ HTTP/1.1" 200 1212
 2023-05-27 13:53:56,624 INFO basehttp 13668 16164 "GET /static/css/style.css HTTP/1.1" 200 87
+2023-05-27 12:12:13,643 INFO autoreload 46512 140383802107712 Watching for file changes with StatReloader
+2023-05-27 12:13:42,628 INFO autoreload 46512 140383802107712 /home/effectmaks/auto_order/auto/auto/settings.py changed, reloading.
+2023-05-27 12:13:43,526 INFO autoreload 46709 140460866426688 Watching for file changes with StatReloader
+2023-05-27 12:13:49,976 INFO autoreload 46844 139844822472512 Watching for file changes with StatReloader
+2023-05-27 12:14:11,670 INFO autoreload 46982 139951057868608 Watching for file changes with StatReloader
+2023-05-27 12:14:28,849 INFO autoreload 47249 140590836893504 Watching for file changes with StatReloader
+2023-05-27 12:14:48,453 INFO autoreload 47572 140022742652736 Watching for file changes with StatReloader
+2023-05-27 12:14:57,084 INFO autoreload 47839 139665171990336 Watching for file changes with StatReloader
+2023-05-27 12:15:58,843 INFO autoreload 47839 139665171990336 /home/effectmaks/auto_order/auto/auto/settings.py changed, reloading.
+2023-05-27 12:15:59,761 INFO autoreload 47847 140452992669504 Watching for file changes with StatReloader
+2023-05-27 12:16:27,595 INFO autoreload 48169 140203763570496 Watching for file changes with StatReloader
+2023-05-27 12:21:15,325 INFO autoreload 48860 140142969595712 Watching for file changes with StatReloader
+2023-05-27 12:23:54,917 INFO autoreload 48860 140142969595712 /home/effectmaks/auto_order/auto/auto/settings.py changed, reloading.
+2023-05-27 12:23:55,784 INFO autoreload 49244 140255322519360 Watching for file changes with StatReloader
+2023-05-27 12:24:00,599 INFO autoreload 49381 140208960022336 Watching for file changes with StatReloader
+2023-05-27 13:11:49,190 INFO autoreload 64243 139914043533120 Watching for file changes with StatReloader
+2023-05-27 13:12:19,253 INFO autoreload 64515 139846684055360 Watching for file changes with StatReloader
+2023-05-27 13:15:56,282 INFO autoreload 65309 139963297011520 Watching for file changes with StatReloader
+2023-05-27 13:16:04,420 INFO autoreload 65444 140495334799168 Watching for file changes with StatReloader
